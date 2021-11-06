@@ -1,16 +1,13 @@
-name: CI
+name: Release
 
 on:
-  pull_request:
   push:
     branches:
       - main
 
 jobs:
-  lint:
-    name: Lint
-
-    runs-on: ubuntu-latest
+  release:
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout
@@ -25,5 +22,7 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Run lint
-        run: yarn lint
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn semantic-release
