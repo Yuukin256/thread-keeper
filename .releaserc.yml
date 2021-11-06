@@ -3,7 +3,7 @@ plugins:
   - '@semantic-release/release-notes-generator'
   - '@semantic-release/github'
   - - '@semantic-release/git'
-    - 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+    - 'message': 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
 
 branches:
   - 'main'
