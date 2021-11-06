@@ -24,7 +24,8 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@prisma/client": "^3.4.1"
+    "@prisma/client": "^3.4.1",
+    "discord.js": "^13.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
