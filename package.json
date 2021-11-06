@@ -6,9 +6,10 @@
     "build": "tsc",
     "dev": "ts-node",
     "start": "node .",
-    "lint": "prettier -c . && eslint . && tsc --noEmit",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier -w ."
+    "lint": "eslint src/ --ext .ts && tsc --noEmit",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "format": "prettier src/ --write",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
